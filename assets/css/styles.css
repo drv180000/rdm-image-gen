@@ -1,0 +1,20 @@
+body {
+    background-size: auto;
+    background-color:lightseagreen;
+}
+
+h1{
+    color: antiquewhite;
+}
+
+img{
+    width: auto;
+    max-height: 420px;
+}
+
+.btn-primary {
+    color:white;
+    background-color: cornflowerblue;
+    border-color: white;
+    width:100px;
+  }
