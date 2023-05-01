@@ -1,12 +1,14 @@
-import data from './Images.json'
+import imageData from './Images.json' assert {type: 'json'};
+console.log(imageData);
+
+var data = JSON.parse(imageData);
 
 window.onload = chooseWODPic;
 
-var dataArr = $.parseJSON(data).data;
+let word_of_day = data.WOTD;
+let memes = data.MEME;
 
-let word_of_day = [];
-
-let memes = dataArr[1];
+word_of_day.push(Object.entries(data))
 
 
 let burger = ["assets/img/burger/burger1.jpg", "assets/img/burger/burger2.jpg", "assets/img/burger/burger3.jpg", 
@@ -40,6 +42,7 @@ function chooseMemePic() {
      let chosenImage = memes[randomNum];
      document.getElementById("myPicture").src = chosenImage;
  }
+ 
  function chooseBurgerPic() {
      let imagesLength = burger.length;
      let randomNum = Math.random();
@@ -48,6 +51,7 @@ function chooseMemePic() {
      let chosenImage = burger[randomNum];
      document.getElementById("myPicture").src = chosenImage;
  }
+
  function chooseArtPic() {
      let imagesLength = art.length;
      let randomNum = Math.random();
