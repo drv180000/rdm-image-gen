@@ -1,35 +1,35 @@
-import imageData from './Images.json' assert {type: 'json'};
-console.log(imageData);
+import imageData from '../../Images.json' assert {type: 'json'};
+//console.log(JSON.stringify(imageData));
 
-var data = JSON.parse(imageData);
+const img_data = JSON.parse(JSON.stringify(imageData));
+console.log(img_data);
+
+const memeElm = document.getElementById('memeBtn');
+memeElm.addEventListener('click', chooseMemePic);
+const burgElm = document.getElementById('burgBtn');
+burgElm.addEventListener('click', chooseBurgerPic);
+const artElm = document.getElementById('artBtn');
+artElm.addEventListener('click', chooseArtPic);
+const reactElm = document.getElementById('reactBtn');
+reactElm.addEventListener('click', chooseReactPic);
+const surpElm = document.getElementById('surpBtn');
+surpElm.addEventListener('click', chooseSurprisePic);
+const irlElm = document.getElementById('irlBtn');
+irlElm.addEventListener('click', chooseIRLPic);
 
 window.onload = chooseWODPic;
 
-let word_of_day = data.WOTD;
-let memes = data.MEME;
-
-word_of_day.push(Object.entries(data))
-
-
-let burger = ["assets/img/burger/burger1.jpg", "assets/img/burger/burger2.jpg", "assets/img/burger/burger3.jpg", 
-"assets/img/burger/burger4.jpg"];
-
-let art = ["assets/img/art/art1.jpg", "assets/img/art/art2.jpg", "assets/img/art/art3.jpg", 
-"assets/img/art/art4.png", "assets/img/art/art5.png", "assets/img/art/art6.jpg", "assets/img/art/art7.jpg", 
-"assets/img/art/art8.jpg", "assets/img/art/art9.jpg", "assets/img/art/art10.jpg", "assets/img/art/art11.jpg", 
-"assets/img/art/art12.jpg", "assets/img/art/art13.jpg"];
-
-let react = ["assets/img/reaction/react1.jpg", "assets/img/reaction/react2.jpg", "assets/img/reaction/react3.jpg",
- "assets/img/reaction/react4.jpg", "assets/img/reaction/react5.png"];
-
-let surprise = [];
-
-let irl = ["assets/img/irl/irl1.jpg", "assets/img/irl/irl2.jpg", "assets/img/irl/irl3.jpg", 
-"assets/img/irl/irl4.jpg", "assets/img/irl/irl5.jpg", "assets/img/irl/irl6.jpg", "assets/img/irl/irl7.jpg", 
-"assets/img/irl/irl8.jpg", "assets/img/irl/irl9.jpg", "assets/img/irl/irl10.jpg"];
+let word_of_day = img_data['WOTD'];
+let memes = img_data['MEME'];
+let burger = img_data['BURGER'];
+let art = img_data['ART'];
+let react = img_data['REACT'];
+let irl = img_data['IRL'];
+let surprise = word_of_day.concat(memes, burger, art, react, irl);
 
 function chooseWODPic() {
      let currentDate = new Date();
+     //currentDate.setDate(7);
      let chosenImage = word_of_day[currentDate.getDay()];
      document.getElementById("myPicture").src = chosenImage;
 }
