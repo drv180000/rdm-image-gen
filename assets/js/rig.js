@@ -1,26 +1,13 @@
+import data from './Images.json'
+
 window.onload = chooseWODPic;
 
-let word_of_day = ["assets/img/word-of-day/don1",
- "assets/img/word-of-day/don2.jpg", "assets/img/word-of-day/don3.jpg",
- "assets/img/word-of-day/don4.jpg", "assets/img/word-of-day/don5.jpg",
- "assets/img/word-of-day/don6.jpg", "assets/img/word-of-day/don7.jpg",
- "assets/img/word-of-day/don8.jpg", "assets/img/word-of-day/don9.jpg",
- "assets/img/word-of-day/don10.jpg", "assets/img/word-of-day/don11.jpg", 
- "assets/img/word-of-day/don12.jpg", "assets/img/word-of-day/don13jpg", 
- "assets/img/word-of-day/don14.jpg", "assets/img/word-of-day/don15.jpg", 
- "assets/img/word-of-day/don16.jpg", "assets/img/word-of-day/don17.jpg", 
- "assets/img/word-of-day/don18.jpg", "assets/img/word-of-day/don19.jpg", 
- "assets/img/word-of-day/don20.jpg", "assets/img/word-of-day/don21.jpg",
- "assets/img/word-of-day/don22.jpg", "assets/img/word-of-day/don23.jpg", 
- "assets/img/word-of-day/don24.jpg", "assets/img/word-of-day/don25.jpg", 
- "assets/img/word-of-day/don26.jpg", "assets/img/word-of-day/don27.jpg",
- "assets/img/word-of-day/don28.jpg"];
+var dataArr = $.parseJSON(data).data;
 
-let memes = ["assets/img/memes/meme1.jpg", "assets/img/memes/meme2.png", "assets/img/memes/meme3.png", 
-    "assets/img/memes/meme4.png", "assets/img/memes/meme5.jpg", "assets/img/memes/meme6.png",
-    "assets/img/memes/meme7.JPG", "assets/img/memes/meme8.png", "assets/img/memes/meme9.jpg",
-    "assets/img/memes/meme10.jpg", "assets/img/memes/meme11.jpg", "assets/img/memes/meme12.jpg",
-    "assets/img/memes/meme13.jpg", "assets/img/memes/meme14.jpg", "assets/img/memes/meme15.png"];
+let word_of_day = [];
+
+let memes = dataArr[1];
+
 
 let burger = ["assets/img/burger/burger1.jpg", "assets/img/burger/burger2.jpg", "assets/img/burger/burger3.jpg", 
 "assets/img/burger/burger4.jpg"];
