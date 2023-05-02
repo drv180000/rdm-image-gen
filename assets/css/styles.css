@@ -2,6 +2,7 @@
 body {
     background-size: auto;
     background-color:lightseagreen;
+    padding-top: 30px;
 }
 
 h1{
@@ -9,15 +10,16 @@ h1{
     font-size: 64px;
     color: antiquewhite;
     background-size: auto;
-    background-color: blueviolet;
+    background: radial-gradient(40% 50% at center, blue, #1d6ea1);
 }
 
 .col-img{
     background-size: auto;
-    background-color: black;
+    background-color: #1d6ea1;
     padding-top: 20px;
     padding-bottom: 20px;
     height: 600px;
+    box-shadow: 0 0 20px 20px #1d6ea1;
 }
 
 img{
@@ -28,8 +30,18 @@ img{
 }
 
 .btn-primary {
-    color:white;
-    background-color: cornflowerblue;
-    border-color: white;
+    color:black;
+    background-color: #45de9e;
+    border-color: black;
     width:100px;
+  }
+  .btn-primary:hover{
+    color: white;
+    background-color: #1b4f39;
+    border-color: white;
+  }
+  .btn-primary:active:focus{
+    color:darkturquoise;
+    border-color:darkturquoise;
+    background-color: darkslategray;
   }
