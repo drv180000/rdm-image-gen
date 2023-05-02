@@ -17,11 +17,14 @@ h1{
     background-color: black;
     padding-top: 20px;
     padding-bottom: 20px;
+    height: 600px;
 }
 
 img{
-    width: auto;
-    max-height: 420px;
+    padding-top: 20px;
+    object-fit: contain;
+    width: 500px;
+    max-height: 450px;
 }
 
 .btn-primary {
